@@ -14,6 +14,16 @@ pipeline {
                 sh 'python3  Webhook/main.py'
             }
         }
+        stage('Unit tests') {
+            steps {
+                sh 'echo Running unit tests'
+            }
+        }
+        stage('deploy') {
+            steps {
+                sh 'echo Deploying build'
+            }
+        }
     }
    post {
         always {
